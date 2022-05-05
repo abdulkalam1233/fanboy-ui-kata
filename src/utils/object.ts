@@ -9,7 +9,7 @@ class ObjectUtils {
   }
 
   validateQueryParams(queryParams: any): void {
-    if (Array.isArray(queryParams) || typeof queryParams !== 'object') {
+    if (Array.isArray(queryParams) || queryParams == null || typeof queryParams !== 'object') {
       throw new Error('Query params should be type object');
     }
   }
